@@ -26,7 +26,7 @@ public class SaleController {
 	@GetMapping
 	public Page<Sale> findSales(
 			@RequestParam(value="minDate", defaultValue = "") String minDate, 
-			@RequestParam(value="maxDate", defaultValue = "")String maxDate, 
+			@RequestParam(value="maxDate", defaultValue = "") String maxDate, 
 			Pageable pageable) {
 		
 		return service.findSales(minDate, maxDate, pageable);
